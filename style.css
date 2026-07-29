@@ -690,15 +690,312 @@ transform: scale(1);
     opacity: 1;
     transform: translateY(0);
 }
+
+
+/* =========================================================
+   Mobile responsive restoration
+   Added 2026-07-29
+========================================================= */
+
 @media (max-width: 430px) {
-    .hero {
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero,
+    .problem-inner,
+    .solution-inner,
+    .features-inner,
+    .testimonials-inner,
+    .faq-inner,
+    .final-cta-inner,
+    .footer-inner {
         width: calc(100% - 40px);
-        padding: 72px 0;
+        max-width: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 56px 0 72px;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-content {
+        max-width: none;
     }
 
     .hero h1 {
-        font-size: 48px;
+        margin-bottom: 28px;
+        font-size: 46px;
         line-height: 1.28;
-        margin-bottom: 32px;
+        letter-spacing: 0;
+    }
+
+    .hero-copy {
+        margin-bottom: 28px;
+    }
+
+    .hero-copy p {
+        margin-bottom: 18px;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 320px;
+        height: 54px;
+        font-size: 15px;
+    }
+
+    .cta-note {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        justify-self: stretch;
+        border-radius: 14px;
+    }
+
+    .problem,
+    .solution,
+    .features,
+    .testimonials,
+    .faq,
+    .final-cta {
+        padding: 72px 0;
+    }
+
+    .problem h2,
+    .features-heading h2 {
+        font-size: 32px;
+        line-height: 1.45;
+    }
+
+    .problem-intro {
+        margin-bottom: 36px;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .problem-list,
+    .solution-list,
+    .features-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .problem-card {
+        padding: 18px 20px;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .solution-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .solution h2 {
+        font-size: 31px;
+        line-height: 1.5;
+    }
+
+    .solution-card {
+        padding: 16px 18px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .features-heading {
+        margin-bottom: 36px;
+    }
+
+    .features-heading p {
+        font-size: 16px;
+    }
+
+    .feature-card {
+        min-height: auto;
+        padding: 28px 24px;
+    }
+
+    .feature-card h3 {
+        margin-bottom: 22px;
+        font-size: 22px;
+    }
+
+    .feature-card li {
+        margin-bottom: 12px;
+        font-size: 17px;
+    }
+
+    .testimonials h2,
+    .faq h2 {
+        margin-bottom: 36px;
+        font-size: 32px;
+    }
+
+    .testimonial-card {
+        min-height: auto;
+        padding: 26px 22px;
+    }
+
+    .testimonial-text,
+    .faq-item p {
+        font-size: 15px;
+    }
+
+    .faq-list {
+        max-width: none;
+    }
+
+    .faq-item {
+        margin-bottom: 14px;
+        padding: 22px 20px;
+    }
+
+    .faq-item h3 {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .faq-question {
+        gap: 16px;
+    }
+
+    .faq-question::after {
+        font-size: 22px;
+    }
+
+    .final-cta-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .final-cta-content h2 {
+        margin-bottom: 28px;
+        font-size: 30px;
+        line-height: 1.5;
+    }
+
+    .final-cta-content p {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .final-cta-image {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        justify-self: stretch;
+        border-radius: 14px;
+    }
+
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .problem-card:hover,
+    .solution-card:hover,
+    .feature-card:hover,
+    .testimonial-card:hover,
+    .plan-card:hover,
+    .faq-item:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero,
+    .problem-inner,
+    .solution-inner,
+    .features-inner,
+    .testimonials-inner,
+    .faq-inner,
+    .final-cta-inner,
+    .footer-inner {
+        width: calc(100% - 32px);
+    }
+
+    .hero {
+        padding: 48px 0 64px;
+        gap: 32px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        line-height: 1.3;
+        margin-bottom: 24px;
+    }
+
+    .hero-copy p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        max-width: none;
+        height: 52px;
+        font-size: 14px;
+    }
+
+    .problem,
+    .solution,
+    .features,
+    .testimonials,
+    .faq,
+    .final-cta {
+        padding: 64px 0;
+    }
+
+    .problem h2,
+    .features-heading h2,
+    .testimonials h2,
+    .faq h2 {
+        font-size: 29px;
+    }
+
+    .solution h2,
+    .final-cta-content h2 {
+        font-size: 28px;
+    }
+
+    .problem-card,
+    .solution-card {
+        font-size: 15px;
+    }
+
+    .feature-card {
+        padding: 26px 20px;
+    }
+
+    .feature-card li {
+        font-size: 16px;
+    }
+
+    .testimonial-card,
+    .faq-item {
+        padding: 22px 18px;
+    }
+
+    .faq-item h3 {
+        font-size: 15px;
+    }
+
+    .footer nav a {
+        font-size: 14px;
     }
 }
