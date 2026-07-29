@@ -563,7 +563,7 @@ transform: scale(1);
    Responsive
 ------------------------------ */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .hero {
         width: calc(100% - 80px);
         padding: 100px 0;
@@ -577,8 +577,18 @@ transform: scale(1);
     }
 
     .hero-image {
-        justify-self: start;
-        height: 560px;
+    justify-self: center;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+}
+    .problem-list,
+    .solution-inner,
+    .solution-list,
+    .features-grid,
+    .testimonials-grid,
+    .final-cta-inner {
+        grid-template-columns: 1fr;
     }
 }
 /* ------------------------------
@@ -679,4 +689,16 @@ transform: scale(1);
 .fade-in.fade-ready.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+@media (max-width: 430px) {
+    .hero {
+        width: calc(100% - 40px);
+        padding: 72px 0;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        line-height: 1.28;
+        margin-bottom: 32px;
+    }
 }
