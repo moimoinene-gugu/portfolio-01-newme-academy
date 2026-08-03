@@ -2,6 +2,10 @@
 
 A responsive landing page designed for **NewMe Academy**, a fictional life-design coaching program for adults in their 50s.
 
+## Preview
+
+![NewMe Academy Landing Page Preview](assets/newme-academy-preview.png)
+
 ---
 
 # 🇯🇵 日本語
